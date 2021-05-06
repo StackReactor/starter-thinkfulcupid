@@ -19,27 +19,77 @@
 
   <body>
     <header>
-      <div class="logo">ThinkfulCupid</div>
-      <nav>
-        <ul id="menu">
-          <li><a>Join</a></li>
-          <li><a>About</a></li>
-          <li><a>Download</a></li>
-          <li><a>Blog</a></li>
-        </ul>
+      <div class="logo">
+        <div class="logo-test">ThinkfulCupid</div>
+        </div>  
+
+      <nav id="menu">
+          <a>Join</a>
+          <a>About</a>
+          <a>Download</a>
+          <a>Blog</a>
       </nav>
     </header>
 
     <main>
       <!-- Join -->
-      <section id="join">
+      <section id="join desktop-container">
         <img src="images/love.png" alt="ThinkfulCupid - love" />
         <!-- Add join form here -->
+          <div>
+            <h2>Find your perfect match</h2>
+            <form>
+              <div>
+                <ul>
+                  <li>
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="email@example.com"
+                    />
+                  </li>
+                  <li>
+                    <label for="password">Create a password</label>
+                    <input
+                      id="password"
+                      type="password"
+                      name="password"
+                      minlength="8"
+                    />
+                  </li>
+                  <li>
+                    <label for="name">Username</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Enter your full name"
+                    />
+                  </li>
+                  <li>
+                    <label>I am a...</label>
+                    <select name="fonts" size="1">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="Non-Binary">Non-Binary</option>
+                      <option value="trans-feminine">Trans-Feminine</option>
+                      <option value="trans-masculine">Trans-Masculine</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </li>
+                </ul>
+                <button type="submit">Join</button>
+              </div>
+            </form>
+          </div>
       </section>
 
       <!-- About -->
       <section id="about" class="alternate-background">
         <h2>About</h2>
+        <div class="desktop-container">
         <img
           src="images/sunset-with-heart.png"
           alt="ThinkfulCupid - Sunset with heart"
@@ -58,6 +108,7 @@
           tristique vestibulum. In hac habitasse platea dictumst. Vestibulum sit
           amet pretium quam.
         </p>
+      </div>
       </section>
 
       <!-- Download -->
