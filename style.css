@@ -33,7 +33,7 @@ section.alternate-background {
 
 main img {
   width: 100%;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
 
 /* ---  Groups & Items --- */
@@ -151,7 +151,9 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 800px) {
+
   header {
+    display: flex;
     padding: 20px;
     height: 20px;
     flex-flow: row wrap;
@@ -173,6 +175,7 @@ footer p {
   .desktop-container {
     display: flex;
     margin-bottom: 20px;
+    justify-content: space-between;
   }
 
   main img {
@@ -180,5 +183,43 @@ footer p {
     margin-right: 10px  ;
   }
 
-  
+  .group{
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  #join {
+    display: flex;
+    flex-flow:row wrap;
+  }
+
+  #join img {
+    flex: 1;
+  }
+  .join-form {
+    flex: 2;
+  }
+
+  #download img {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  .subflex{
+    width: 45%;
+  }
+
+  .download-sub-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #download img {
+    width: 50%;
+    margin-left: 25px;
+  }
+
 }
