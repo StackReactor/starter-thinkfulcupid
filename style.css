@@ -33,7 +33,7 @@ section.alternate-background {
 
 main img {
   width: 100%;
-  /* margin-bottom: 25px; */
+  margin: 25px 0px 25px 0px;
 }
 
 /* ---  Groups & Items --- */
@@ -55,64 +55,64 @@ main img {
 /* -------  Navigation ------- */
 
 header {
-  display: flex;
-  flex-direction: column;
   background-color: #83092e;
   padding: 20px 20px 0 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
-  display: flex;
-  flex-direction: column;
   font-family: "Tangerine", cursive;
   font-size: 72px;
   color: #ecdbc9;
 }
 
-header nav {
-  margin: 25px 0;
-  display: flex;
-  justify-content: center;
+header nav ul li {
+  list-style-type: none;
 }
 
-header nav a {
+header nav ul li a {
   color: #ecdbc9;
   text-decoration: none;
   padding: 0 20px 0 0;
 }
 
-header nav a:hover {
+header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
 }
 
+#menu{
+  display: flex;
+
+}
+
+#join{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-image{
+  width: 100%
+}
+
+.red-header{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 200;
+}
+
 /* -------  Join Form ------- */
 form {
-  border: 4px solid #6b1a22;
-  margin: 40px;
-}
-
-form ul {
-  padding-left: 0.1rem;
-  padding-right: 30px;
-}
-
-li {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5em;
-}
-
-li label {
-  padding: 0.5em 1em 0.5em 0;
-  flex: 1;
-}
-
-li input {
-  flex: 0.5;
+  border: 2px solid #6b1a22;
   padding: 10px;
-  width: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 
 form label {
@@ -125,15 +125,25 @@ form input {
   width: 180px;
 }
 
+.form-item{
+  display: flex;
+  justify-content: space-between;
+}
+
 form button {
-  justify-content: center;
   background-color: #83092e;
   border: none;
   color: #fff;
-  font-size: 50px;
+  font-size: 24px;
   padding: 15px;
   width: 100%;
 }
+
+.about-flex{
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 /* -------  Footer ------- */
@@ -149,66 +159,50 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
 
-@media all and (min-width: 800px) {
-
-  header {
-    display: flex;
-    padding: 20px;
-    height: 20px;
-    flex-flow: row wrap;
-    justify-content: space-between;
+  .logo{
+    font-size: 6vw;
   }
 
-  .logo {
-    font-size: 25px;
-    flex-flow: row wrap;
-    line-height: .70;
-  }
-
-  header nav {
-    font-size: 13px;
-    margin: 0;
-    width: 25%;
-  }
-  
-  .desktop-container {
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-between;
-  }
-
-  main img {
-    width: 30%;
-    margin-right: 10px  ;
-  }
-
-  .group{
+  header{
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
   }
 
-
-  #join {
-    display: flex;
-    flex-flow:row wrap;
-  }
-
-  #join img {
-    flex: 1;
-  }
-  .join-form {
-    flex: 2;
-  }
-
-  #download img {
-    display: flex;
+  #join{
+    flex-direction: row;
     justify-content: space-around;
-    width: 50%;
+  }
+
+  #join img{
+    width: 45%;
   }
 
   .subflex{
     width: 45%;
+  }
+
+  form {
+    margin: 10px;
+    font-size: 1.25vw;
+  }
+
+
+
+  .about-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-flex p {
+    font-size: 1.25vh
+  }
+
+  #about img {
+    width: 30%;
+    margin-right: 10px;
   }
 
   .download-sub-flex{
@@ -220,6 +214,15 @@ footer p {
   #download img {
     width: 50%;
     margin-left: 25px;
+  }
+
+  .blog-flex{
+    display: flex;
+  }
+
+  .blog-sub-flex-row{
+    margin: 25px;
+    
   }
 
 }
